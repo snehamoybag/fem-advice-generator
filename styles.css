@@ -1,0 +1,126 @@
+:root {
+  --clr-primary-400: 150, 100%, 66%;
+
+  --clr-neutral-200: 193, 38%, 86%;
+  --clr-neutral-400: 217, 19%, 38%;
+  --clr-neutral-700: 217, 19%, 24%;
+  --clr-neutral-900: 218, 23%, 16%;
+
+  --ff-primary: 'Manrope', sans-serif;
+
+  --fs-200: 0.625rem;
+  --fs-400: 0.8275rem;
+  --fs-900: 1.4rem;
+}
+
+/* basic css reset */
+html, body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+  font-weight: 800;
+  color: hsla(var(--clr-neutral-200));
+  background-color: hsl(var(--clr-neutral-900));
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+  padding: 0 1em;
+}
+
+.advice-card {
+  min-height: 5rem;
+  background-color: hsl(var(--clr-neutral-700));
+  padding: 2em 1.5em 4em;
+  border-radius: 0.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.advice-card__id {
+  font-size: var(--fs-200);
+  color: hsl(var(--clr-primary-400));
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  margin-bottom: 1.5rem;
+}
+
+.advice-card__quote {
+  font-size: var(--fs-900);
+  line-height: 1.5;
+  padding-bottom: 1.65em;
+  /* divider */
+  background-image: url('images/pattern-divider-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.advice-card__quote::before {
+  content:  open-quote;
+}
+
+.advice-card__quote::after {
+  content: close-quote;
+}
+
+.advice-card__btn {
+  --translate-value: translate(-50%, 50%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: var(--translate-value);
+  padding: 2em;
+  background-color: hsl(var(--clr-primary-400));
+  background-image: url('images/icon-dice.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 10px hsl(var(--clr-neutral-900));
+}
+
+.advice-card__btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 50px hsla(var(--clr-primary-400), 0.75);
+}
+
+.advice-card__btn:focus-visible {
+  outline: 5px dashed hsl(var(--clr-primary-400));
+  outline-offset: 0.5em;
+}
+
+.advice-card__btn:active {
+  transform: var(--translate-value) scale(0.95);
+}
+
+/* Hiding class, making content visible only to screen readers but not visually */
+/* "sr" meaning "screen-reader" */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
