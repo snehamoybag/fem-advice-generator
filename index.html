@@ -3,26 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="author" content="Snehamoy Bag">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Advice generator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | Advice generator app</title>
+  <!-- Font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- javascript -->
+  <script src="app.js" defer></script>
 </head>
 <body>
-
-  Advice #<!-- Advice ID goes here -->
-
-  "<!-- Advice text goes here -->"
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <div class="grid-container">
+    <header>
+      <h1 class="sr-only">Generate A Random Advice</h1>
+    </header>
+    <main>
+      <div class="advice-card">
+        <p class="advice-card__id">
+          Advice #<span id="advice-id">Loading...</span>
+        </p>
+        <p id="advice-quote" class="advice-card__quote">
+        Loading..
+        </p>
+        <button id="btn-advice" class="advice-card__btn"><span class="sr-only">Generate a New Advice</span></button>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
