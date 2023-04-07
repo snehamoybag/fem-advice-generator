@@ -113,6 +113,11 @@ main {
   content: close-quote;
 }
 
+.advice-card__quote::before,
+.advice-card__quote::after {
+  letter-spacing: 0.2em;
+}
+
 .advice-card__btn {
   --translate-value: translate(-50%, 50%);
   position: absolute;
