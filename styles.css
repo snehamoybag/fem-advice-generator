@@ -96,6 +96,7 @@ main {
 }
 
 .advice-card__quote {
+  --quote-spacing: 0.2em;
   font-size: var(--fs-900);
   line-height: 1.5;
   padding-bottom: 1.75em;
@@ -107,15 +108,12 @@ main {
 
 .advice-card__quote::before {
   content: open-quote;
+  padding-right: var(--quote-spacing);
 }
 
 .advice-card__quote::after {
   content: close-quote;
-}
-
-.advice-card__quote::before,
-.advice-card__quote::after {
-  letter-spacing: 0.2em;
+  padding-left: var(--quote-spacing);
 }
 
 .advice-card__btn {
