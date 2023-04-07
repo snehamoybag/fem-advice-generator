@@ -13,6 +13,14 @@
   --fs-900: 1.4rem;
 }
 
+@media (min-width: 37.5em) {
+:root {
+  --fs-200: 0.75rem;
+  --fs-400: 1rem;
+  --fs-900: 1.75rem;
+}
+}
+
 /* basic css reset */
 html, body {
   height: 100%;
@@ -54,19 +62,29 @@ a:visited {
 }
 
 main {
-  width: 100%;
-  justify-self: center;
-  align-self: center;
   padding: 0 1em;
+  /* for inner contents */
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
 .advice-card {
+  --side-padding: 1.5em;
+  width: min(100%, 33.75rem);
   min-height: 5rem;
-  background-color: hsl(var(--clr-neutral-700));
-  padding: 2em 1.5em 4em;
-  border-radius: 0.5rem;
   text-align: center;
+  background-color: hsl(var(--clr-neutral-700));
+  padding: 2.5em var(--side-padding) 4em;
+  border-radius: 0.625rem;
+  box-shadow: 25px 40px 40px hsla(0, 0%, 0%, 0.15);
   position: relative;
+}
+
+@media (min-width: 37.5em) {
+  .advice-card {
+    --side-padding: 2em;
+  }
 }
 
 .advice-card__id {
@@ -74,13 +92,13 @@ main {
   color: hsl(var(--clr-primary-400));
   text-transform: uppercase;
   letter-spacing: 0.5em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.65rem;
 }
 
 .advice-card__quote {
   font-size: var(--fs-900);
   line-height: 1.5;
-  padding-bottom: 1.65em;
+  padding-bottom: 1.75em;
   /* divider */
   background-image: url('images/pattern-divider-mobile.svg');
   background-repeat: no-repeat;
@@ -101,7 +119,8 @@ main {
   bottom: 0;
   left: 50%;
   transform: var(--translate-value);
-  padding: 2em;
+  width: 4rem;
+  aspect-ratio: 1/1;
   background-color: hsl(var(--clr-primary-400));
   background-image: url('images/icon-dice.svg');
   background-repeat: no-repeat;
@@ -123,6 +142,12 @@ main {
 
 .advice-card__btn:active {
   transform: var(--translate-value) scale(0.95);
+}
+
+.attribution {
+  padding: 0 2em;
+  text-align: center;
+  line-height: 1.8;
 }
 
 /* Hiding class, making content visible only to screen readers but not visually */
