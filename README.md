@@ -1,5 +1,5 @@
 # Frontend Mentor - Advice generator app solution
-![Design preview](./design/desktop-preview.jpg)
+![Design preview](design/desktop-preview.jpg)
 This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
@@ -28,9 +28,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop screen view of the app](./screenshots/fem-advice-generator-app-desktop.jpeg)
+![Desktop screen view of the app](screenshots/fem-advice-generator-app-desktop.jpeg)
 
-![Mobile screen view of the app](./screenshots/fem-advice-generator-app-mobile.jpeg)
+![Mobile screen view of the app](screenshots/fem-advice-generator-app-mobile.jpeg)
 
 
 ### Links
